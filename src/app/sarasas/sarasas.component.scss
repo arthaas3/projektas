@@ -1,0 +1,56 @@
+@import '../../main-styles.scss';
+
+.pasirinkimas
+{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+
+    .konteineris
+    {
+        display: flex;
+        max-width: 680px;
+        height: 100%;
+        width: 100%;
+
+        .pajamos, .islaidos
+        {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 0;
+            flex-grow: 1;
+
+            h1
+            {
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .etiketes
+            {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .pajamos
+        {
+            margin-right: 35px;
+
+            h1 
+            {
+            color: $green;
+            }
+        }
+        .islaidos
+        {
+            h1 
+            {
+            color: $red;
+            }
+        }
+
+    }
+}

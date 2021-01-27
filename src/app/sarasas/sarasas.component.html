@@ -1,0 +1,27 @@
+<section class="pasirinkimas">
+   
+    <div class="konteineris">
+
+        <div class="pajamos">
+            <h1>Pajamos</h1>
+                <div class="etiketes">
+                    <div *ngFor="let item of Mokejimas">
+                        <app-etikete *ngIf="item.suma >= 0" [item]="item" (xClick)="del(item)" style="display: block; margin-bottom: 20px;"></app-etikete>
+                    </div>
+                </div>
+        </div>
+
+        <div class="islaidos">
+            <h1>Išlaidos</h1>
+                <div class="etiketes">
+                    <div class="etiketes">
+                        <div *ngFor="let item of Mokejimas">
+                            <app-etikete *ngIf="item.suma < 0" [item]="item" (xClick)="del(item)" style="display: block; margin-bottom: 20px;"></app-etikete>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+</section>

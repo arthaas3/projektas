@@ -1,0 +1,16 @@
+<div class="pagrindas">
+    <div class="etikete" [ngClass]="{ 'pajamos': item.suma >= 0, 'islaidos': item.suma < 0 }">
+        <div class="paslauga">
+            <p>
+                {{ item.paslauga }}
+            </p>
+        </div>
+
+        <div class="suma">
+            <p>
+                {{ item.suma }}
+            </p>
+        </div>
+    </div>
+    <div class="x" (click)="onXclick()"></div>
+</div>

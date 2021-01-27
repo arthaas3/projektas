@@ -1,0 +1,23 @@
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <div class="field is-horizontal">
+        <div class="field-body">
+
+            <div class="field is-narrow">
+                <p class="control">
+                    <input type="number" required name="suma" style="width: 100px;" class="input" placeholder="Suma" [ngModel]="item.suma">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="text" required name="paslauga" class="input" placeholder="Paslauga" [ngModel]="item.paslauga">
+                </p>
+            </div>
+
+            <div class="field is-narrow">
+                <button type="submit" class="button is-primary" [disabled]="!itemForm.valid">Pridėti</button>
+            </div>
+
+        </div>
+    </div>
+</form>

@@ -1,0 +1,17 @@
+<div class="virsus">
+    <h1>finansų skaičiuotuvas</h1>
+</div>
+
+<section class="suma">
+    <h2 [ngClass]="{ 'raudonas': pinigai < 0, 'zalias': pinigai > 0 }"> {{ pinigai }} </h2>
+</section>
+
+<section class="pasirinkimas">
+    <div class="konteineris">
+        <app-mokejimas style="padding: 20px;" (formSubmit)="addItem($event)"></app-mokejimas>
+    </div>
+</section>
+
+<hr style="margin-top: 0;">
+
+<app-sarasas [Mokejimas]="Mokejimas" (delete)="deleteItem($event)"></app-sarasas>
